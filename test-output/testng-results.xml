@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1694" started-at="2018-09-08T12:07:14Z" finished-at="2018-09-08T12:07:16Z">
+  <suite name="Default suite" duration-ms="6101" started-at="2018-09-08T16:13:10Z" finished-at="2018-09-08T16:13:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1694" started-at="2018-09-08T12:07:14Z" finished-at="2018-09-08T12:07:16Z">
-      <class name="com.ce.apitesting.SimpleGetRequest">
-        <test-method status="PASS" signature="login()[pri:0, instance:com.ce.apitesting.SimpleGetRequest@475530b9]" name="login" is-config="true" duration-ms="3258" started-at="2018-09-08T12:07:11Z" finished-at="2018-09-08T12:07:14Z">
+    <test name="Default test" duration-ms="6101" started-at="2018-09-08T16:13:10Z" finished-at="2018-09-08T16:13:16Z">
+      <class name="com.ce.apitesting.GithubApiTest">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.ce.apitesting.GithubApiTest@4b9e13df]" name="login" is-config="true" duration-ms="3665" started-at="2018-09-08T16:13:06Z" finished-at="2018-09-08T16:13:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="getSingleCommitComment()[pri:0, instance:com.ce.apitesting.SimpleGetRequest@475530b9]" name="getSingleCommitComment" duration-ms="1673" started-at="2018-09-08T12:07:14Z" finished-at="2018-09-08T12:07:16Z">
+        <test-method status="PASS" signature="listAllLabelsOfRepo()[pri:0, instance:com.ce.apitesting.GithubApiTest@4b9e13df]" name="listAllLabelsOfRepo" duration-ms="2940" started-at="2018-09-08T16:13:10Z" finished-at="2018-09-08T16:13:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getSingleCommitComment -->
-      </class> <!-- com.ce.apitesting.SimpleGetRequest -->
+        </test-method> <!-- listAllLabelsOfRepo -->
+        <test-method status="PASS" signature="listAllLabelsOfRepoAssertions()[pri:0, instance:com.ce.apitesting.GithubApiTest@4b9e13df]" name="listAllLabelsOfRepoAssertions" duration-ms="1568" started-at="2018-09-08T16:13:13Z" finished-at="2018-09-08T16:13:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- listAllLabelsOfRepoAssertions -->
+        <test-method status="PASS" signature="listBranches()[pri:0, instance:com.ce.apitesting.GithubApiTest@4b9e13df]" name="listBranches" duration-ms="1545" started-at="2018-09-08T16:13:15Z" finished-at="2018-09-08T16:13:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- listBranches -->
+      </class> <!-- com.ce.apitesting.GithubApiTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

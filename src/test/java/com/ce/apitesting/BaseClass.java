@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeSuite;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 /**
  * @version 1.0, 08-Sep-2018
@@ -19,11 +20,12 @@ public class BaseClass {
 
     @BeforeSuite
     public void login() {
+          
         Response response = RestAssured
                                 .given()
                                     .header("Accept", "application/vnd.github.v3+json")
                                     .auth()
-                                        .basic("gschambial", "13Torrishn@do93")
+                                        .basic("", "")
                                  .when()
                                      .get("https://api.github.com")
                                   .andReturn();
@@ -31,7 +33,7 @@ public class BaseClass {
         //This x-auth-token is used by all subsequent requests
         authToken = response.cookie("x-auth-token");
         //But we are Hard Coding the token here
-        authToken = "YOUR-PERSONAL-ACCESS-TOKEN-GOES-HERE";
+        authToken = "";
         
     }
 
