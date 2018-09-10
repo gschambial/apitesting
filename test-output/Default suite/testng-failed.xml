@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ce.apitesting.GithubApiTest">
+      <class name="com.ce.apitesting.SampleGetRequestTest">
         <methods>
           <include name="login"/>
-          <include name="listAllLabelsOfRepoAssertions"/>
+          <include name="sampleGetRequestWithPathParam404"/>
         </methods>
-      </class> <!-- com.ce.apitesting.GithubApiTest -->
+      </class> <!-- com.ce.apitesting.SampleGetRequestTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
