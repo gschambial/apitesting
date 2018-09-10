@@ -102,5 +102,41 @@ public class SampleGetRequestTest extends BaseClass{
          System.out.println("sampleGetRequestWithPathParam404 Response: " + response.asString());
          assertEquals(response.getStatusCode(), 404);
     }
+    
+    /**
+     * Chaining of API
+     * Extract first_name from first API and use in second API call
+     */
+    @Test
+    public void sampleGetRequestWithExtract() {
+        
+        
+        //First API call
+        String firstName = RestAssured
+                                .given()
+                                    .pathParam("userId", 2)
+                                .when()
+                                    .get("https://reqres.in/api/users/{userId}")
+                                .then()
+                                    .extract()
+                                        .path("data.first_name");
+         System.out.println("First API response: " + firstName);
+         
+         //Second API call
+         
+         //Create User object
+         User user = new User();
+         user.setName(firstName);
+         user.setJob("leader");
+         
+         Response response = RestAssured
+                                 .given()
+                                     .body(user)
+                                     .header("Content-Type", "application/json")
+                                 .when()
+                                     .post("https://reqres.in/api/users")
+                                     .andReturn();
+          System.out.println("Second API response: " + response.asString());    
+    }
 
 }
